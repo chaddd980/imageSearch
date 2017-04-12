@@ -13,6 +13,11 @@ var searchSchema = new Schema({
 
 var Search = mongoose.model('Search', searchSchema);
 
+router.get('/', function(req, res) {
+
+  res.render("index");
+})
+
 /* GET home page. */
 router.get('/api/imagesearch/:search', function(req, res) {
   var search = req.params.search;
