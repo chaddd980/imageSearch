@@ -3,7 +3,7 @@ var router = express.Router();
 var Bing = require('node-bing-api')({ accKey: "ecbad7d82338422eb761c1b8249218e1" });
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGOLAB_URI);
+mongoose.connect(process.env.MONGODB_SEARCH_URI);
 var Schema = mongoose.Schema;
 
 var searchSchema = new Schema({
